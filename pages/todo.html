@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro To-Do List App</title>
+    <link rel="stylesheet" href="../css/todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-app">
+            <!-- Header -->
+            <div class="header">
+                <h1><i class="fas fa-tasks"></i> Pro To-Do List</h1>
+                <p>Stay organized and productive</p>
+            </div>
+
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="todoInput" 
+                        class="todo-input" 
+                        placeholder="Add a new task..."
+                        autocomplete="off"
+                    >
+                    <select id="prioritySelect" class="priority-select">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <button id="addBtn" class="btn-add">
+                        <i class="fas fa-plus"></i> Add
+                    </button>
+                </div>
+            </div>
+
+            <!-- Stats Section -->
+            <div class="stats">
+                <div class="stat-card">
+                    <i class="fas fa-list-check"></i>
+                    <div>
+                        <p class="stat-label">Total</p>
+                        <p class="stat-value" id="totalTasks">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <p class="stat-label">Completed</p>
+                        <p class="stat-value" id="completedTasks">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-circle"></i>
+                    <div>
+                        <p class="stat-label">Pending</p>
+                        <p class="stat-value" id="pendingTasks">0</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">
+                        <i class="fas fa-list"></i> All
+                    </button>
+                    <button class="filter-btn" data-filter="pending">
+                        <i class="fas fa-hourglass-half"></i> Pending
+                    </button>
+                    <button class="filter-btn" data-filter="completed">
+                        <i class="fas fa-check"></i> Completed
+                    </button>
+                </div>
+                <div class="sort-buttons">
+                    <button class="sort-btn" id="sortByDateBtn" title="Sort by Date">
+                        <i class="fas fa-calendar"></i>
+                    </button>
+                    <button class="sort-btn" id="sortByPriorityBtn" title="Sort by Priority">
+                        <i class="fas fa-arrow-up"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tasks List -->
+            <div class="tasks-container">
+                <div class="tasks-list" id="tasksList">
+                    <div class="empty-state">
+                        <i class="fas fa-inbox"></i>
+                        <p>No tasks yet. Add one to get started!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <button class="btn-action btn-clear-completed" id="clearCompletedBtn">
+                    <i class="fas fa-broom"></i> Clear Completed
+                </button>
+                <button class="btn-action btn-clear-all" id="clearAllBtn">
+                    <i class="fas fa-trash"></i> Clear All
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/todo.js"></script>
+</body>
+</html>
