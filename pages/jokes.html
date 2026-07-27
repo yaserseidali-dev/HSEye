@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <link rel="stylesheet" href="../css/jokes.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="joke-generator">
+            <div class="header">
+                <h1><i class="fas fa-laugh-beam"></i> Joke Generator</h1>
+                <p>Get a random joke to brighten your day!</p>
+            </div>
+
+            <div class="joke-display">
+                <div class="joke-box" id="jokeBox">
+                    <p class="loading">Click the button to get a joke...</p>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <button class="btn btn-primary" id="getJokeBtn">
+                    <i class="fas fa-dice"></i> Get a Joke
+                </button>
+                <button class="btn btn-secondary" id="copyBtn">
+                    <i class="fas fa-copy"></i> Copy
+                </button>
+                <button class="btn btn-secondary" id="shareBtn">
+                    <i class="fas fa-share-alt"></i> Share
+                </button>
+            </div>
+
+            <div class="joke-info">
+                <p id="jokeType" class="info-text">Type: -</p>
+                <p id="jokeCategory" class="info-text">Category: -</p>
+            </div>
+
+            <div class="filters">
+                <label for="categorySelect">
+                    <i class="fas fa-filter"></i> Filter by Category:
+                </label>
+                <select id="categorySelect" class="select-category">
+                    <option value="any">Any Category</option>
+                    <option value="programming">Programming</option>
+                    <option value="knock-knock">Knock Knock</option>
+                    <option value="general">General</option>
+                </select>
+            </div>
+
+            <div class="joke-history">
+                <h3><i class="fas fa-history"></i> Recent Jokes</h3>
+                <div class="history-list" id="historyList">
+                    <p class="empty-message">No jokes yet. Get started!</p>
+                </div>
+                <button class="btn btn-small" id="clearHistoryBtn">
+                    <i class="fas fa-trash"></i> Clear History
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/jokes.js"></script>
+</body>
+</html>
